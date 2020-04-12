@@ -1,0 +1,11 @@
+#!/bin/bash
+
+npm start --silent -- $@
+
+# selectedDirectory=$(npm start -- $@)
+
+# if [[ $selectedDir != "" ]]
+# then
+#     cd $selectedDir
+# fi
+

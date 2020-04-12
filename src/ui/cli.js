@@ -1,0 +1,35 @@
+const path = require( 'path' );
+const os = require( 'os' );
+const commander = require( 'commander' );
+
+const {
+    version, bin
+} = require( path.join( '..', '..', 'package.json' ) );
+const program = new commander.Command();
+
+const DEFAULT_LIMIT = 10;
+
+const SEARCH_MODES = [
+    'recursive',
+    'find'
+];
+
+const getSearchMode = mode =>
+    SEARCH_MODES.includes( mode ) ? mode : SEARCH_MODES[ 0 ];
+
+const basicGlobParser = glob => glob.replace( '~', os.homedir() );
+
+program
+    .name( Object.keys( bin )
+        .pop() )
+    .version( version )
+    .arguments( '[search...]' )
+    .action( ( search, env ) => {
+        env.search = search.join( ' ' );
+    } )
+    .option( '-d, --directory [string]', 'uses the directory as base', basicGlobParser, os.homedir() )
+    .option( '-m, --mode [string]', 'which search mode to use', getSearchMode, SEARCH_MODES[ 0 ] )
+    .option( '-l, --limit [number]', 'limits the line outputs', Number.parseInt, DEFAULT_LIMIT );
+
+
+module.exports = program;
