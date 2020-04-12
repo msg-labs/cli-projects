@@ -3,8 +3,9 @@ const exec = promisify( require( 'child_process' ).exec );
 
 
 // Returns the current directory path without the trailing /.git folder
+const START = 0;
 const removeGitDir = directory =>
-    directory.slice( 0, directory.indexOf( '/.git' ) );
+    directory.slice( START, directory.indexOf( '/.git' ) );
 
 
 const find = async path => {
@@ -13,7 +14,7 @@ const find = async path => {
     const branches = stdout
         .split( '\n' )
         .map( removeGitDir )
-        .filter( line => !!line );
+        .filter( line => Boolean( line.replace( /\s/g, '' ) ) );
 
     return branches;
 };

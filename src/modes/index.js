@@ -2,8 +2,8 @@ const recursive = require( './recursive.js' );
 const find = require( './find.js' );
 
 const modes = {
-    recursive,
-    find
+    find,
+    recursive
 };
 
 module.exports = modes;
