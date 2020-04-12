@@ -4,7 +4,7 @@
     "description": "Find all your projects from your cli",
     "main": "index.js",
     "scripts": {
-        "start": "node index.js",
+        "start": "node index",
         "test": "jest",
         "lint": "eslint \"**/*.js\" \"*.js\"",
         "release": "standard-version"
@@ -37,7 +37,8 @@
         "standard-version": "7.0.1"
     },
     "bin": {
-        "msg-projects": "./bin/msg-projects"
+        "msg-projects": "./bin/msg-cli-projects",
+        "msg-projects-start": "./index.js"
     },
     "dependencies": {
         "@msg-labs/cli-prompt-list": "1.1.0",

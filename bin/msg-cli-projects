@@ -1,11 +1,16 @@
 #!/bin/bash
 
-npm start --silent -- $@
+TMP_DIR='/tmp/msg-cli-projects-target';
 
-# selectedDirectory=$(npm start -- $@)
+msg-projects-start $@
 
-# if [[ $selectedDir != "" ]]
-# then
-#     cd $selectedDir
-# fi
+selectedDir=$(cat $TMP_DIR 2>/dev/null)
+
+rm -f $TMP_DIR
+
+if [[ $selectedDir != "" ]]
+then
+    echo "Directory changed to $selectedDir"
+    cd $selectedDir
+fi
 
