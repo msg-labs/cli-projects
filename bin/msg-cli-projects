@@ -2,7 +2,7 @@
 
 TMP_DIR='/tmp/msg-cli-projects-target';
 
-msg-projects-start $@
+msg-cli-projects-start $@
 
 selectedDir=$(cat $TMP_DIR 2>/dev/null)
 

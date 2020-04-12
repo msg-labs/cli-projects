@@ -37,8 +37,8 @@
         "standard-version": "7.0.1"
     },
     "bin": {
-        "msg-projects": "./bin/msg-cli-projects",
-        "msg-projects-start": "./index.js"
+        "msg-cli-projects": "./bin/msg-cli-projects",
+        "msg-cli-projects-start": "./index.js"
     },
     "dependencies": {
         "@msg-labs/cli-prompt-list": "1.1.0",
