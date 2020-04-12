@@ -21,7 +21,7 @@ const basicGlobParser = glob => glob.replace( '~', os.homedir() );
 
 program
     .name( Object.keys( bin )
-        .pop() )
+        .shift() )
     .version( version )
     .arguments( '[search...]' )
     .action( ( search, env ) => {
