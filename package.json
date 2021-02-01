@@ -13,6 +13,11 @@
         "type": "git",
         "url": "git+https://github.com/msg-labs/cli-projects.git"
     },
+    "files": [
+        "index.js",
+        "bin/msg-cli-projects",
+        "src/**/*"
+    ],
     "keywords": [
         "project",
         "finder",
