@@ -10,11 +10,22 @@ const removeGitDir = directory =>
 
 const find = async path => {
     const command = `find ${ path } -type d -name ".git" -print 2>/dev/null`;
-    const { stdout } = await exec( command );
+    let stdout = '';
+
+    try {
+        ( { stdout } = await exec( command ) );
+    } catch ( error ) {
+        if ( error.stdout.length ) {
+            ( { stdout } = error );
+        } else {
+            throw error;
+        }
+    }
+
     const branches = stdout
         .split( '\n' )
         .map( removeGitDir )
-        .filter( line => Boolean( line.replace( /\s/g, '' ) ) );
+        .filter( line => Boolean( line.replace( /\s/ug, '' ) ) );
 
     return branches;
 };
