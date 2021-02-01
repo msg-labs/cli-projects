@@ -10,12 +10,14 @@ const log = require( './src/log.js' );
 
 cli.parse( process.argv );
 
+const options = cli.opts();
+
 const searchOptions = {
-    input: cli.search,
-    limit: cli.limit
+    input: options.search,
+    limit: options.limit
 };
 
-modes[ cli.mode ]( path.join( cli.directory ) )
+modes[ options.mode ]( path.join( options.directory ) )
     .then( projects => prompt(
         projects,
         'Project name > ',
