@@ -1,0 +1,14 @@
+{
+	"name": "msg-learning/cli-projects Development",
+	"build": {
+		"dockerfile": "Dockerfile"
+	},
+	"settings": {
+		"terminal.integrated.shell.linux": "/bin/bash"
+	},
+	"extensions": [
+		"dbaeumer.vscode-eslint"
+	],
+	"postCreateCommand": "npm install",
+	"remoteUser": "node"
+}
