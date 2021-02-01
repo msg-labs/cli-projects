@@ -34,7 +34,7 @@
         "husky": "4.0.10",
         "jest": "24.9.0",
         "lint-staged": "9.5.0",
-        "standard-version": "7.0.1"
+        "standard-version": "8.0.1"
     },
     "bin": {
         "msg-cli-projects": "./bin/msg-cli-projects",
