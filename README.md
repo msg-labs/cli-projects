@@ -8,7 +8,7 @@ folder on them, filter and directly navigate to them.
 ## Installation
 
 ```sh
-npm install --save @msg-labs/cli-projects
+npm install -g @msg-labs/cli-projects
 ```
 
 In order to enable the directory change you should alias the binary and
