@@ -29,21 +29,21 @@
     },
     "homepage": "https://github.com/msg-labs/cli-projects#readme",
     "devDependencies": {
-        "@msg-labs/eslint-config": "1.6.0",
-        "eslint": "6.8.0",
-        "husky": "4.0.10",
-        "jest": "24.9.0",
-        "lint-staged": "9.5.0",
-        "standard-version": "7.0.1"
+        "@msg-labs/eslint-config": "1.6.2",
+        "eslint": "7.19.0",
+        "husky": "4.3.8",
+        "jest": "26.6.3",
+        "lint-staged": "10.5.3",
+        "standard-version": "9.1.0"
     },
     "bin": {
         "msg-cli-projects": "./bin/msg-cli-projects",
         "msg-cli-projects-start": "./index.js"
     },
     "dependencies": {
-        "@msg-labs/cli-prompt-list": "1.1.0",
-        "@types/jest": "24.9.0",
-        "commander": "4.1.1"
+        "@msg-labs/cli-prompt-list": "1.2.0",
+        "@types/jest": "26.0.20",
+        "commander": "7.0.0"
     },
     "husky": {
         "hooks": {
