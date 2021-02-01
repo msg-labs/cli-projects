@@ -2,8 +2,7 @@
 
 > Navigate your projects from your cli 
 
-`cli-projects` allows you to see see all your directories with a `.git`
-folder on them, filter and directly navigate to them.
+`cli-projects` allows you to find, filter and directly navigate to all your directories with a `.git` folder.
 
 ## Installation
 
