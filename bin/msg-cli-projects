@@ -1,0 +1,16 @@
+#!/bin/bash
+
+TMP_DIR='/tmp/msg-cli-projects-target';
+
+msg-cli-projects-start $@
+
+selectedDir=$(cat $TMP_DIR 2>/dev/null)
+
+rm -f $TMP_DIR
+
+if [[ $selectedDir != "" ]]
+then
+    echo "Directory changed to $selectedDir"
+    cd $selectedDir
+fi
+

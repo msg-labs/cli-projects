@@ -1,0 +1,58 @@
+{
+    "name": "@msg-labs/cli-projects",
+    "version": "1.0.0",
+    "description": "Find all your projects from your cli",
+    "main": "index.js",
+    "scripts": {
+        "start": "node index",
+        "test": "jest",
+        "lint": "eslint \"**/*.js\" \"*.js\"",
+        "release": "standard-version"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/msg-labs/cli-projects.git"
+    },
+    "keywords": [
+        "project",
+        "finder",
+        "cli"
+    ],
+    "author": {
+        "name": "Miguel Sanchez Gonzalez",
+        "email": "miguelsanychez@gmail.com",
+        "url": "https://miguelsanchezgonzalez.com"
+    },
+    "license": "WTFNMFPL-1.0",
+    "bugs": {
+        "url": "https://github.com/msg-labs/cli-projects/issues"
+    },
+    "homepage": "https://github.com/msg-labs/cli-projects#readme",
+    "devDependencies": {
+        "@msg-labs/eslint-config": "1.6.0",
+        "eslint": "6.8.0",
+        "husky": "4.0.10",
+        "jest": "24.9.0",
+        "lint-staged": "9.5.0",
+        "standard-version": "7.0.1"
+    },
+    "bin": {
+        "msg-cli-projects": "./bin/msg-cli-projects",
+        "msg-cli-projects-start": "./index.js"
+    },
+    "dependencies": {
+        "@msg-labs/cli-prompt-list": "1.1.0",
+        "@types/jest": "24.9.0",
+        "commander": "4.1.1"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "npm run test && lint-staged"
+        }
+    },
+    "lint-staged": {
+        "*.js": [
+            "npm run lint -- --fix"
+        ]
+    }
+}
